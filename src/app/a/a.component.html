@@ -1,0 +1,6 @@
+<h1>A componenti</h1>
+<input type="text" [(ngModel)]="name">
+
+<h3 style="color: red;">{{lastName2}}</h3>
+
+<app-b [name2]="name" (sendToAEvent)="setLastName($event)"></app-b>
