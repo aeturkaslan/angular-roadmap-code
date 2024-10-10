@@ -1,0 +1,25 @@
+<h1>First Angular App</h1>
+<p>{{title}}</p>
+<p>{{name}}</p>
+
+
+<div class="row">
+    <input type="text" [value]="componentBinding">
+</div>
+
+<button [class.active]="isActive">Class Binding Butonu</button>
+
+<p [style.background-color]="isHighlighted ? 'yellow' : 'transparent'" 
+   [style.font-size]="fontSize">
+   Highlighted Text - Style Binding
+</p>
+
+<button (click)="onClick()">Event Binding Butonu - Tıklayınız</button>
+
+<div class="row">
+    <p>Two-Way Binding</p>
+    <input type="text" [(ngModel)]="name">
+</div>
+
+<div *ngIf="list.length">This text is visible only if list is not empty</div>
+
