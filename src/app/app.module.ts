@@ -9,6 +9,8 @@ import { BComponent } from './b/b.component';
 import { BindingComponent } from './binding/binding.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { ExampleDirective } from './directives/example.directive';
+import { CustomifDirective } from './directives/customif.directive';
+import { CustomforDirective } from './directives/customfor.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ExampleDirective } from './directives/example.directive';
     BComponent,
     BindingComponent,
     DirectiveComponent,
-    ExampleDirective
+    ExampleDirective,
+    CustomifDirective,
+    CustomforDirective
   ],
   imports: [
     BrowserModule,
