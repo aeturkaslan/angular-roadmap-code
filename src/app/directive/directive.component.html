@@ -1,0 +1,40 @@
+
+<div>
+    <p>ngFor Directive</p>
+    <ul>
+        <li *ngFor="let name of names ; let i = index
+                                        let isFirst = first
+                                        let isLast = last
+                                        let isEven = even
+                                        let isOdd = odd">{{ i }} - {{name}}, is the ID ... [first? - {{ isFirst }}]
+                                                                                            [last? - {{ isLast }}]
+                                                                                            [even number? - {{ isEven }}]
+                                                                                            [odd number? - {{ isOdd }}]</li>
+    </ul>
+</div>
+
+<div>
+    <p>ngIf Directive</p>
+    <!--Eğer visible true ise div kısmı gösterilir, false ise ng-template kısmı gösterilir-->
+    <div *ngIf="visible ; else elseContent">This is visible only if "visible" variable is true</div>
+    <ng-template #elseContent>This is shown as "elseContent" if the "visible" variable is false </ng-template>
+</div>
+
+<div>
+    <p>ngSwitch Directive</p>
+    <div [ngSwitch]="sayi">
+        <div *ngSwitchCase="1">1</div>
+        <div *ngSwitchCase="2">2</div>
+        <div *ngSwitchDefault>Diğer</div>
+    </div>
+</div>
+
+<div>
+    <p>ngClass Directive</p>
+    <input type="text" [ngClass]="cl">
+</div>
+
+<div>
+    <p>ngStyle Directive</p>
+    <input type="text" [ngStyle]="style">
+</div>
