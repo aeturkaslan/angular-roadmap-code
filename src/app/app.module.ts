@@ -8,6 +8,7 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { BindingComponent } from './binding/binding.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { ExampleDirective } from './directives/example.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DirectiveComponent } from './directive/directive.component';
     AComponent,
     BComponent,
     BindingComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    ExampleDirective
   ],
   imports: [
     BrowserModule,
