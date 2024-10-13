@@ -18,6 +18,7 @@ import { Child2Component } from './component_communication/child_to_parent/child
 import { Parent3Component } from './component_communication/child_to_child/parent3/parent3.component';
 import { Child3aComponent } from './component_communication/child_to_child/child3a/child3a.component';
 import { Child3bComponent } from './component_communication/child_to_child/child3b/child3b.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { Child3bComponent } from './component_communication/child_to_child/child
     Child2Component,
     Parent3Component,
     Child3aComponent,
-    Child3bComponent
+    Child3bComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
