@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,8 @@ import { Parent3Component } from './component_communication/child_to_child/paren
 import { Child3aComponent } from './component_communication/child_to_child/child3a/child3a.component';
 import { Child3bComponent } from './component_communication/child_to_child/child3b/child3b.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { TemplatedrivenComponent } from './forms/templatedriven/templatedriven.component';
+import { ModeldrivenComponent } from './forms/modeldriven/modeldriven.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +39,14 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     Parent3Component,
     Child3aComponent,
     Child3bComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    TemplatedrivenComponent,
+    ModeldrivenComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
