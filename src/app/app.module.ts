@@ -21,6 +21,7 @@ import { Child3bComponent } from './component_communication/child_to_child/child
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { TemplatedrivenComponent } from './forms/templatedriven/templatedriven.component';
 import { ModeldrivenComponent } from './forms/modeldriven/modeldriven.component';
+import { ValidationsComponent } from './forms/validations/validations.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ModeldrivenComponent } from './forms/modeldriven/modeldriven.component'
     Child3bComponent,
     LifecycleComponent,
     TemplatedrivenComponent,
-    ModeldrivenComponent
+    ModeldrivenComponent,
+    ValidationsComponent
   ],
   imports: [
     BrowserModule,
