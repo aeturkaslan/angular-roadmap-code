@@ -22,6 +22,9 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { TemplatedrivenComponent } from './forms/templatedriven/templatedriven.component';
 import { ModeldrivenComponent } from './forms/modeldriven/modeldriven.component';
 import { ValidationsComponent } from './forms/validations/validations.component';
+import { ProductComponent } from './dependency_injection/product/product.component';
+import { ProductService } from './dependency_injection/services/product.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,15 +46,34 @@ import { ValidationsComponent } from './forms/validations/validations.component'
     LifecycleComponent,
     TemplatedrivenComponent,
     ModeldrivenComponent,
-    ValidationsComponent
+    ValidationsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    //ProductService  //Default Type Token
+    //{provide: ProductService, useClass: ProductService} // Type Token
+    //{provide: "productService", useClass: ProductService} //String Token
+    //{provide: productServiceIT, useClass: ProductService} //Injection Token (Detay için dokümantasyona bak!)
+
+    //ProductService'den önce HttpClient ile API'a requestte bulunduktan sonra ProductService kullanımı için senaryoda;
+    {
+      provide: "productService", useFactory: (httpClient: HttpClient) => {
+
+        const obs = httpClient.get("https://jsonplaceholder.typicode.com/posts").
+          subscribe({ next: data => console.log(data) });
+        return new ProductService(); //instance olarak döndürmeliyiz
+
+      }, deps: [HttpClient]
+    }
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
