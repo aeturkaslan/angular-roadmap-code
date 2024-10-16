@@ -25,6 +25,8 @@ import { ValidationsComponent } from './forms/validations/validations.component'
 import { ProductComponent } from './dependency_injection/product/product.component';
 import { ProductService } from './dependency_injection/services/product.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { ReadUserComponent } from './components/read-user/read-user.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     TemplatedrivenComponent,
     ModeldrivenComponent,
     ValidationsComponent,
-    ProductComponent
+    ProductComponent,
+    CreateUserComponent,
+    ReadUserComponent
   ],
   imports: [
     BrowserModule,
