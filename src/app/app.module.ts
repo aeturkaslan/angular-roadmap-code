@@ -29,6 +29,10 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { ReadUserComponent } from './components/read-user/read-user.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProductsComponent } from './components/products/products.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { AboutComponent } from './components/about/about.component';
     CreateUserComponent,
     ReadUserComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent,
+    ProductsComponent,
+    AdminComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
