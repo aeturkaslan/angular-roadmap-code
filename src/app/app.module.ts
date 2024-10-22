@@ -27,6 +27,8 @@ import { ProductService } from './dependency_injection/services/product.service'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { ReadUserComponent } from './components/read-user/read-user.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { ReadUserComponent } from './components/read-user/read-user.component';
     ValidationsComponent,
     ProductComponent,
     CreateUserComponent,
-    ReadUserComponent
+    ReadUserComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
